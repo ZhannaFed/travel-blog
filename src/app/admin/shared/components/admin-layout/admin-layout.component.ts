@@ -11,7 +11,7 @@ export class AdminLayoutComponent {
 
   constructor(
     private router: Router,
-    private auth: AuthService
+    public auth: AuthService
   ){}
 
 logout($event: Event){
