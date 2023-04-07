@@ -27,8 +27,8 @@
     <div 
     class="form-control"
     [ngClass]="{invalid: form.get('password')?.touched && form.get('password')?.invalid}">
-        <label for="Password">Пароль:</label>
-        <input id="Password" type="Password" formControlName="password">
+        <label for="password">Пароль:</label>
+        <input id="password" type="password" formControlName="password">
         <div 
         *ngIf="form.get('password')?.touched && form.get('password')?.invalid"
         class="validation"
