@@ -15,8 +15,31 @@
         </div>
     </div>
 
-    <div class="form-control">
+    <div 
+    class="form-control"
+    [ngClass]="{invalid: form.get('img')?.touched && form.get('img')?.invalid}">
+        <label for="img">Главное изображение поста:</label>
+        <quill-editor type="file" formControlName="img"></quill-editor>
+        <div
+        *ngIf="form.get('img')?.touched && form.get('img')?.invalid" 
+        class="validation">
+            <small *ngIf="form.get('img')?.errors?.['required']">
+            Выберите главное изображение для поста
+            </small>
+        </div>
+    </div>
+
+    <div class="form-control"
+    [ngClass]="{invalid: form.get('text')?.touched && form.get('text')?.invalid}">
         <label>Контент поста:</label>
+        <quill-editor formControlName="text"></quill-editor>
+        <div
+        *ngIf="form.get('text')?.touched && form.get('text')?.invalid" 
+        class="validation">
+            <small *ngIf="form.get('text')?.errors?.['required']">
+            Заполните контент поста
+            </small>
+        </div>
     </div>
 
     <div 
