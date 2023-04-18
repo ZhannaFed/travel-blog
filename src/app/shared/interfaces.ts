@@ -13,6 +13,7 @@ export interface Post {
     id?: string
     title: string
     img: string
+    desc: string
     text: string
     author: string
     date: Date

@@ -30,6 +30,19 @@
     </div>
 
     <div class="form-control"
+    [ngClass]="{invalid: form.get('desc')?.touched && form.get('desc')?.invalid}">
+        <label>Описание поста:</label>
+        <quill-editor formControlName="desc"></quill-editor>
+        <div
+        *ngIf="form.get('desc')?.touched && form.get('desc')?.invalid" 
+        class="validation">
+            <small *ngIf="form.get('desc')?.errors?.['required']">
+            Заполните описание поста
+            </small>
+        </div>
+    </div>
+
+    <div class="form-control"
     [ngClass]="{invalid: form.get('text')?.touched && form.get('text')?.invalid}">
         <label>Контент поста:</label>
         <quill-editor formControlName="text"></quill-editor>
