@@ -17,8 +17,8 @@
     <div 
     class="form-control"
     [ngClass]="{invalid: form.get('img')?.touched && form.get('img')?.invalid}">
-        <label for="img">Главное изображение поста:</label>
-        <quill-editor type="file" formControlName="img"></quill-editor>
+        <label for="img">Главное изображение поста <b>550 X 300</b>:</label>
+        <quill-editor id="img" formControlName="img"></quill-editor>
         <div
         *ngIf="form.get('img')?.touched && form.get('img')?.invalid" 
         class="validation">
@@ -28,6 +28,20 @@
         </div>
     </div>
 
+    <div 
+    class="form-control"
+    [ngClass]="{invalid: form.get('desc')?.touched && form.get('desc')?.invalid}">
+        <p><label>Описание поста:</label></p>
+        <quill-editor formControlName="desc"></quill-editor>
+        <div
+        *ngIf="form.get('desc')?.touched && form.get('desc')?.invalid" 
+        class="validation">
+            <small *ngIf="form.get('desc')?.errors?.['required']">
+            Заполните описание поста
+            </small>
+        </div>
+    </div>
+   
     <div class="form-control"
     [ngClass]="{invalid: form.get('text')?.touched && form.get('text')?.invalid}">
         <label>Контент поста:</label>

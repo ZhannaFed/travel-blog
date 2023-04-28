@@ -9,9 +9,13 @@
         <small>{{ post.author }}</small>
     </div>
 
-    <div>
+    <div class="card-img">
         <quill-view-html [content]="post.img"></quill-view-html>
     </div>
+
+    <div class="card-desc">
+        <quill-view-html [content]="post.desc"></quill-view-html>
+    </div>  
 
     <button 
     [routerLink]="['/post', post.id]"

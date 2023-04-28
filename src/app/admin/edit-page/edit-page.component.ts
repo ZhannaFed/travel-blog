@@ -35,6 +35,7 @@ export class EditPageComponent implements OnInit, OnDestroy {
       this.form = new FormGroup({
         title: new FormControl(post.title, Validators.required),
         img: new FormControl(post.img, Validators.required),
+        desc: new FormControl(post.desc, Validators.required),
         text: new FormControl(post.text, Validators.required)
       })
     })
@@ -57,11 +58,11 @@ export class EditPageComponent implements OnInit, OnDestroy {
       ...this.post,
       title: this.form.value.title,
       img: this.form.value.img,
+      desc: this.form.value.desc,
       text: this.form.value.text,
     }).subscribe(() => {
       this.submitted = false
       this.alert.success('Пост был обновлен')
-
     })
 
   }

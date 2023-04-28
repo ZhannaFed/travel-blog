@@ -18,7 +18,7 @@
     <div 
     class="form-control"
     [ngClass]="{invalid: form.get('img')?.touched && form.get('img')?.invalid}">
-        <label for="img">Главное изображение поста:</label>
+        <label for="img">Главное изображение поста <b>550 X 300</b>:</label>
         <quill-editor type="file" formControlName="img"></quill-editor>
         <div
         *ngIf="form.get('img')?.touched && form.get('img')?.invalid" 

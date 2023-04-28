@@ -14,5 +14,9 @@ import { QuillModule } from "ngx-quill";
 })
 
 export class SharedModule {
+
+   constructor(){
+    
+   }
     
 }

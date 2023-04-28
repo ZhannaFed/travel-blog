@@ -4,6 +4,7 @@ import { Post } from 'src/app/shared/interfaces';
 import { PostsService } from 'src/app/shared/posts.service';
 import { AlertService } from '../shared/services/alert.service';
 
+
 @Component({
   selector: 'app-create-page',
   templateUrl: './create-page.component.html',
@@ -12,13 +13,14 @@ import { AlertService } from '../shared/services/alert.service';
 export class CreatePageComponent implements OnInit{
   
   form!: FormGroup
-
+  
   constructor(
     private postsService: PostsService,
     private alert: AlertService
     ){}
 
   ngOnInit(): void {
+   
     this.form = new FormGroup({
       title: new FormControl(null, Validators.required),
       img: new FormControl(null, Validators.required),
@@ -26,6 +28,7 @@ export class CreatePageComponent implements OnInit{
       text: new FormControl(null, Validators.required),
       author: new FormControl(null, Validators.required)
     })
+        
   }
 
   submit() {
