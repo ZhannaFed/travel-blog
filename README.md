@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Firebase hosting
 
-https://travel-blog-50442.web.app - Travel Blog Website
+https://travel-blog-50442.web.app - Travel Blog Website<br/>
 https://travel-blog-50442.web.app/admin - Travel Blog Admin (user: z@mail.ru, password: 123456)
 
 ## Development server
